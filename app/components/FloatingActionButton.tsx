@@ -71,7 +71,7 @@ export default function FloatingActionButton() {
         <ChatIcon />
       </button>
       {isOpen && (
-        <Modal title="Contact Me" onClose={handleClose}>
+        <Modal title="Contact Me" onClose={handleClose} showClose={false}>
           {statusMessage ? (
             <div className="flex items-center">
               <p>{statusMessage}</p>

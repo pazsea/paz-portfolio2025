@@ -32,7 +32,7 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col h-full gap-6 lg:flex-row ">
+    <div className="flex flex-col h-full gap-6 lg:max-w-[50%] self-center">
       {experiences.map((exp, index) => (
         <ExperienceCard
           key={index}

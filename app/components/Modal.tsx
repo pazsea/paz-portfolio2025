@@ -6,9 +6,15 @@ interface ModalProps {
   title: string;
   onClose: () => void;
   children: ReactNode;
+  showClose?: boolean;
 }
 
-export default function Modal({ title, onClose, children }: ModalProps) {
+export default function Modal({
+  title,
+  onClose,
+  children,
+  showClose = true,
+}: ModalProps) {
   const { isDesktop } = useGlobal();
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -47,7 +53,7 @@ export default function Modal({ title, onClose, children }: ModalProps) {
             <div>{children}</div>
           </div>
         </div>
-        {!isDesktop && (
+        {!isDesktop && showClose && (
           <button
             className="mt-4 w-full py-2 bg-secondary text-white rounded"
             onClick={onClose}

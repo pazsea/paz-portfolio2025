@@ -23,10 +23,42 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Patrick's Portfolio</title>
+        <title>Patrick's Portfolio | Software developer</title>
+        <meta name="title" content="Patrick's Portfolio | Software developer" />
         <meta
           name="description"
-          content="Patrick Sjöberg's portfolio built with Next.js and Supabase"
+          content="Software developer specializing in React, React Native, Java, and C#. Explore my current projects and stay updated on the latest news. Let’s build something great together!"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://metatags.io/" />
+        <meta
+          property="og:title"
+          content="Patrick's Portfolio | Software developer"
+        />
+        <meta
+          property="og:description"
+          content="Software developer specializing in React, React Native, Java, and C#. Explore my current projects and stay updated on the latest news. Let’s build something great together!"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          property="og:image"
+          content="https://metatags.io/images/meta-tags.png"
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta
+          property="twitter:title"
+          content="Patrick's Portfolio | Software developer"
+        />
+        <meta
+          property="twitter:description"
+          content="Software developer specializing in React, React Native, Java, and C#. Explore my current projects and stay updated on the latest news. Let’s build something great together!"
+        />
+        <meta
+          property="twitter:image"
+          content="https://metatags.io/images/meta-tags.png"
         />
         <meta
           name="keywords"
