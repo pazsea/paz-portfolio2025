@@ -62,7 +62,7 @@ export default function ProjectCard({
         height={225}
         className="w-full h-auto max-w-md mx-auto"
       />
-      <div className="absolute inset-0 flex flex-col justify-start p-4 text-white transition-opacity duration-300 bg-black bg-opacity-75 rounded-lg opacity-0 group-hover:opacity-100">
+      <div className="absolute inset-0 flex flex-col justify-start p-4 text-white transition-opacity duration-300 bg-black bg-opacity-75 rounded-lg opacity-0 lg:group-hover:opacity-100">
         <ProjectInformation
           name={name}
           releaseDate={releaseDate}
