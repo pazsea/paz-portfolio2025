@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "dev": {
+      "cache": true
+    },
+    "start": {
+      "cache": true
+    }
+  },
+  "defaultBase": "main",
+  "nxCloudId": "6766d0f341ab203bbcb01326"
+}
