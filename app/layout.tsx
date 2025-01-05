@@ -23,43 +23,47 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Patrick's Portfolio | Software developer</title>
-        <meta name="title" content="Patrick's Portfolio | Software developer" />
+        <link rel="icon" href="/favicon.ico?v=2" />
+        <title>Patrick's Portfolio | Software Developer</title>
+        <meta name="title" content="Patrick's Portfolio | Software Developer" />
         <meta
           name="description"
-          content="Software developer specializing in React, React Native, Java, and C#. Explore my current projects and stay updated on the latest news. Let’s build something great together!"
+          content="Software developer specializing in React, React Native, Java, and C#. Explore my projects and stay updated on the latest news. Let’s build something great together!"
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://metatags.io/" />
+        <meta property="og:url" content="https://patricksjoberg.vercel.app/" />
         <meta
           property="og:title"
-          content="Patrick's Portfolio | Software developer"
+          content="Patrick's Portfolio | Software Developer"
         />
         <meta
           property="og:description"
-          content="Software developer specializing in React, React Native, Java, and C#. Explore my current projects and stay updated on the latest news. Let’s build something great together!"
+          content="Software developer specializing in React, React Native, Java, and C#. Explore my projects and stay updated on the latest news. Let’s build something great together!"
         />
-        <link rel="icon" href="/favicon.ico" />
         <meta
           property="og:image"
-          content="https://metatags.io/images/meta-tags.png"
+          content="https://frkkedednnwnuuhenogp.supabase.co/storage/v1/object/public/images/paz.jpeg?t=2025-01-05T22%3A18%3A42.560Z"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta
+          property="twitter:url"
+          content="https://patricksjoberg.vercel.app/"
+        />
         <meta
           property="twitter:title"
-          content="Patrick's Portfolio | Software developer"
+          content="Patrick's Portfolio | Software Developer"
         />
         <meta
           property="twitter:description"
-          content="Software developer specializing in React, React Native, Java, and C#. Explore my current projects and stay updated on the latest news. Let’s build something great together!"
+          content="Software developer specializing in React, React Native, Java, and C#. Explore my projects and stay updated on the latest news. Let’s build something great together!"
         />
         <meta
           property="twitter:image"
-          content="https://metatags.io/images/meta-tags.png"
+          content="https://frkkedednnwnuuhenogp.supabase.co/storage/v1/object/public/images/paz.jpeg?t=2025-01-05T22%3A18%3A42.560Z"
         />
+
         <meta
           name="keywords"
           content="Patrick Sjöberg, Portfolio, Next.js, Supabase, React, Tailwind CSS, Frontend, developer"
