@@ -68,7 +68,7 @@ export default function ProjectCard({
           releaseDate={releaseDate}
           platform={platform}
           description={truncatedDescription}
-          lineClamp="4"
+          lineClamp
         />
       </div>
     </div>

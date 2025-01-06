@@ -5,7 +5,7 @@ interface ProjectInformationProps {
   releaseDate: string;
   platform: "APP" | "WEB" | "BOTH";
   description: string;
-  lineClamp?: string;
+  lineClamp?: boolean;
 }
 
 export default function ProjectInformation({
@@ -13,7 +13,7 @@ export default function ProjectInformation({
   releaseDate,
   platform,
   description,
-  lineClamp = "none",
+  lineClamp,
 }: ProjectInformationProps) {
   const formattedDate = new Date(releaseDate).toLocaleDateString("en-GB", {
     day: "2-digit",
@@ -28,7 +28,7 @@ export default function ProjectInformation({
       <div className="flex mt-2 space-x-2">
         <PlatformLabels platform={platform} />
       </div>
-      <p className={`mt-2 line-clamp-${lineClamp}`}>{description}</p>
+      <p className={`mt-2 ${lineClamp ? "line-clamp-4" : ""}`}>{description}</p>
     </div>
   );
 }
