@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -25,14 +25,14 @@
     --b-color: #e8eaf3;
 
     .bg-spot-patterns {
-      background-image: url('/background-dark.svg');
+      background-image: url("/background-dark.svg");
     }
 
     .bg-spot-patterns-right {
       position: relative;
       overflow: hidden;
     }
-    
+
     .bg-spot-patterns-right::before {
       content: "";
       position: absolute;
@@ -40,7 +40,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('/background-dark.svg');
+      background-image: url("/background-dark.svg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -59,7 +59,7 @@
   }
 
   .bg-spot-patterns {
-    background-image: url('/background-light.svg');
+    background-image: url("/background-light.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
@@ -69,7 +69,7 @@
     position: relative;
     overflow: hidden;
   }
-  
+
   .bg-spot-patterns-right::before {
     content: "";
     position: absolute;
@@ -77,7 +77,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/background-light.svg');
+    background-image: url("/background-light.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -86,14 +86,32 @@
   }
 }
 
-
-body {
-  font-family: 'Jura', Arial, Helvetica, sans-serif;
-}
-
 html {
   background-color: var(--background);
   scroll-behavior: smooth;
+  /* Prevent text size adjustment */
+  text-size-adjust: 100%;
+  font-size: 16px; /* Set base font size in px */
+}
+
+body {
+  font-family: "Jura", Arial, Helvetica, sans-serif;
+  /* Use fixed units for font sizes */
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li,
+button {
+  font-size: 16px;
 }
 
 .card {
@@ -147,7 +165,7 @@ html {
   cursor: pointer;
 }
 
-.toggle-checkbox:checked~.toggle-slot {
+.toggle-checkbox:checked ~ .toggle-slot {
   background-color: var(--background);
 }
 
@@ -162,7 +180,7 @@ html {
     transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
 }
 
-.toggle-checkbox:checked~.toggle-slot .toggle-button {
+.toggle-checkbox:checked ~ .toggle-slot .toggle-button {
   background-color: var(--primary);
   box-shadow: inset 0px 0px 0px 0.1875em var(--primary);
   transform: translate(0.4375em, 0.4375em);
@@ -178,7 +196,7 @@ html {
   transition: opacity 150ms, transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
 }
 
-.toggle-checkbox:checked~.toggle-slot .sun-icon-wrapper {
+.toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
   opacity: 0;
   transform: translate(0.75em, 0.5em) rotate(0deg);
 }
@@ -193,7 +211,7 @@ html {
   transition: opacity 150ms, transform 500ms cubic-bezier(0.26, 2.5, 0.46, 0.71);
 }
 
-.toggle-checkbox:checked~.toggle-slot .moon-icon-wrapper {
+.toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
   opacity: 1;
   transform: translate(2.5em, 0.4em) rotate(-15deg);
 }
@@ -211,7 +229,7 @@ html {
     width: 0.75em;
   }
 
-  .toggle-checkbox:checked~.toggle-slot .toggle-button {
+  .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
     transform: translate(0.375em, 0.31em);
   }
 
@@ -221,7 +239,7 @@ html {
     transform: translate(0.375em, 0.32em) rotate(15deg);
   }
 
-  .toggle-checkbox:checked~.toggle-slot .sun-icon-wrapper {
+  .toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
     transform: translate(0.5625em, 0.375em) rotate(0deg);
   }
 
@@ -231,7 +249,7 @@ html {
     transform: translate(2.0625em, 0.32em) rotate(0deg);
   }
 
-  .toggle-checkbox:checked~.toggle-slot .moon-icon-wrapper {
+  .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
     transform: translate(1.875em, 0.32em) rotate(-15deg);
   }
 
@@ -255,7 +273,7 @@ html {
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
