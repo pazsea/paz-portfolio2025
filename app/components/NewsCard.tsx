@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import FireIcon from "./icons/FireIcon"; // Import FireIcon component
 
 interface NewsCardProps {

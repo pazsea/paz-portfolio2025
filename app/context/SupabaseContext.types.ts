@@ -1,3 +1,8 @@
+export type Link = {
+  text: string;
+  url: string;
+};
+
 export type Project = {
   id: number;
   name: string;
@@ -5,6 +10,7 @@ export type Project = {
   release_date: string;
   image_url: string;
   platform: "APP" | "WEB" | "BOTH";
+  links: Link[];
   isNew?: boolean;
 };
 
@@ -14,6 +20,7 @@ export type News = {
   date: string;
   description: string;
   image_url: string;
+  links: Link[];
   isNew?: boolean;
 };
 

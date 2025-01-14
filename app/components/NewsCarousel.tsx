@@ -7,6 +7,7 @@ import ChevronIconRight from "./ChevronIconRight"; // Updated import
 import Modal from "./Modal";
 import { News } from "../context/SupabaseContext.types";
 import { useGlobal } from "../context/GlobalContext"; // Import useGlobal
+import ExternalIcon from "./icons/ExternalIcon";
 
 export default function NewsCarousel() {
   const { news } = useNews();
@@ -33,7 +34,7 @@ export default function NewsCarousel() {
     const visibleNews = isDesktop
       ? news.slice(currentIndex, currentIndex + 3)
       : news.slice(currentIndex, currentIndex + 1);
-    return visibleNews.map((newsItem, index) => (
+    return visibleNews.map((newsItem) => (
       <div
         key={newsItem.id}
         className="cursor-pointer"
@@ -78,10 +79,26 @@ export default function NewsCarousel() {
               </div>
             )}
             <div
-              className={`${selectedNews.image_url ? "pt-2" : ""} text-left`}
+              className={`${
+                selectedNews.image_url ? "mt-4" : ""
+              } text-left text-md`}
             >
               <p>{selectedNews.description}</p>
             </div>
+            {selectedNews.links && selectedNews.links.length > 0 && (
+              <div className="flex flex-wrap mt-4 ">
+                {selectedNews.links.map((link) => (
+                  <a
+                    key={link.url}
+                    href={link.url}
+                    target="_blank"
+                    className="m-1 px-3 py-1 text-md link rounded-full flex items-baseline gap-2"
+                  >
+                    {link.text} <ExternalIcon />
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </Modal>
       )}

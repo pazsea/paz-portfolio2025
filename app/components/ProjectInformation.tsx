@@ -25,7 +25,7 @@ export default function ProjectInformation({
     <div>
       <h3 className="text-lg font-bold">{name}</h3>
       <p className="mt-2">Release Date: {formattedDate}</p>
-      <div className="flex mt-2 space-x-2">
+      <div className="flex mt-1 space-x-2">
         <PlatformLabels platform={platform} />
       </div>
       <p className={`mt-2 ${lineClamp ? "line-clamp-4" : ""}`}>{description}</p>

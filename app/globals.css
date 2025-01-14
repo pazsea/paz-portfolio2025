@@ -90,8 +90,9 @@ html {
   background-color: var(--background);
   scroll-behavior: smooth;
   /* Prevent text size adjustment */
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
   font-size: 16px; /* Set base font size in px */
+  text-size-adjust: 100%;
 }
 
 body {
@@ -118,15 +119,30 @@ button {
   border-color: var(--b-color);
   border-width: 1px;
   width: 100%;
-  /* Ensure full width */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Add subtle shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.link {
+  color: var(--accent);
+  font-weight: bold;
+  border: 1px solid var(--accent);
+}
+
+.link:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+
+  .external-icon {
+    color: var(--primary);
+  }
 }
 
 .spacing-lg {
@@ -143,6 +159,10 @@ button {
 
 .moon-icon {
   color: var(--primary);
+}
+
+.external-icon {
+  color: var(--accent);
 }
 
 .check-icon {
