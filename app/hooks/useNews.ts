@@ -37,13 +37,13 @@ export default function useNews() {
         setError(error);
       } else {
         const currentDate = new Date();
-        const oneMonthAgo = new Date();
-        oneMonthAgo.setMonth(currentDate.getMonth() - 1);
+        const halfMonthAgo = new Date();
+        halfMonthAgo.setDate(currentDate.getDate() - 15);
 
         const newsWithIsNew = data
           ?.map((newsItem) => ({
             ...newsItem,
-            isNew: new Date(newsItem.date) >= oneMonthAgo,
+            isNew: new Date(newsItem.date) <= halfMonthAgo,
           }))
           .sort(
             (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()

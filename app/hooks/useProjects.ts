@@ -37,15 +37,14 @@ export default function useProjects() {
         setError(error);
       } else {
         const currentDate = new Date();
-        const oneMonthAgo = new Date();
-        oneMonthAgo.setMonth(currentDate.getMonth() - 1);
+        const halfMonthAgo = new Date();
+        halfMonthAgo.setDate(currentDate.getDate() - 15);
 
         const projectsWithIsNew = data?.map((project) => {
           const releaseDateObj = new Date(project.release_date);
           return {
             ...project,
-            isNew:
-              releaseDateObj >= oneMonthAgo && releaseDateObj <= currentDate,
+            isNew: releaseDateObj <= halfMonthAgo,
           };
         });
 
