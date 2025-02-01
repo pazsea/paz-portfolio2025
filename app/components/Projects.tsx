@@ -16,6 +16,8 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
+  const isInternalLink = (url: string) => url.startsWith("#");
+
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -86,16 +88,31 @@ export default function Projects() {
               />
               {selectedProject.links && selectedProject.links.length > 0 && (
                 <div className="flex flex-wrap mt-4">
-                  {selectedProject.links.map((link) => (
-                    <a
-                      key={link.url}
-                      href={link.url}
-                      target="_blank"
-                      className="m-1 px-3 py-1 text-md link rounded-full flex items-baseline gap-2"
-                    >
-                      {link.text}
-                    </a>
-                  ))}
+                  {selectedProject.links.map((link) =>
+                    isInternalLink(link.url) ? (
+                      <button
+                        key={link.url}
+                        onClick={() => {
+                          document
+                            .querySelector(link.url)
+                            ?.scrollIntoView({ behavior: "smooth" });
+                          setSelectedProject(null);
+                        }}
+                        className="m-1 px-3 py-1 text-md link rounded-full flex items-baseline gap-2"
+                      >
+                        {link.text}
+                      </button>
+                    ) : (
+                      <a
+                        key={link.url}
+                        href={link.url}
+                        target="_blank"
+                        className="m-1 px-3 py-1 text-md link rounded-full flex items-baseline gap-2"
+                      >
+                        {link.text}
+                      </a>
+                    )
+                  )}
                 </div>
               )}
             </div>
