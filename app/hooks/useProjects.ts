@@ -44,7 +44,7 @@ export default function useProjects() {
           const releaseDateObj = new Date(project.release_date);
           return {
             ...project,
-            isNew: releaseDateObj <= halfMonthAgo,
+            isNew: releaseDateObj >= halfMonthAgo,
           };
         });
 
