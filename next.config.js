@@ -13,6 +13,10 @@ module.exports = {
         protocol: "https",
         hostname: "newdomain.com", // Added new domain
       },
+      {
+        protocol: "https",
+        hostname: "x.com",
+      },
     ],
   },
   env: {
