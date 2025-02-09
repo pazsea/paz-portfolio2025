@@ -17,6 +17,10 @@ module.exports = {
         protocol: "https",
         hostname: "x.com",
       },
+      {
+        protocol: "https",
+        hostname: "pbs.twimg.com",
+      },
     ],
   },
   env: {
