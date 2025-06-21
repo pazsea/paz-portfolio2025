@@ -1,33 +1,28 @@
 import { useMemo } from "react";
-import { Project } from "../context/SupabaseContext.types";
 import projectsData from "../data/projects.json";
+import { Project } from "../context/SupabaseContext.types";
 
 export default function useProjects() {
   const projects = useMemo(() => {
-    const currentDate = new Date();
-    const halfMonthAgo = new Date();
-    halfMonthAgo.setDate(currentDate.getDate() - 15);
+    const now = new Date();
+    const fifteenDaysAgo = new Date(now);
+    fifteenDaysAgo.setDate(now.getDate() - 15);
 
-    const projectsWithIsNew = (projectsData as Project[]).map((project) => {
-      const releaseDateObj = new Date(project.release_date);
-      return {
-        ...project,
-        isNew: releaseDateObj >= halfMonthAgo,
-      };
-    }); // Sort by closest to today's date (most recent from today first)
-    const sorted = projectsWithIsNew.sort((a, b) => {
-      const today = new Date();
-      const dateA = new Date(a.release_date);
-      const dateB = new Date(b.release_date);
-
-      // Calculate absolute difference from today
-      const diffA = Math.abs(today.getTime() - dateA.getTime());
-      const diffB = Math.abs(today.getTime() - dateB.getTime());
-
-      return diffA - diffB; // Closest to today first
-    });
-
-    return sorted;
+    return (
+      (projectsData as Project[])
+        .map((project) => ({
+          ...project,
+          releaseDate: new Date(project.release_date),
+          isNew: new Date(project.release_date) >= fifteenDaysAgo,
+        }))
+        .filter((project) => !isNaN(project.releaseDate.getTime()))
+        // Sort by closest to today's date (smallest absolute difference first)
+        .sort((a, b) => {
+          const diffA = Math.abs(now.getTime() - a.releaseDate.getTime());
+          const diffB = Math.abs(now.getTime() - b.releaseDate.getTime());
+          return diffA - diffB;
+        })
+    );
   }, []);
 
   return { projects, error: null };

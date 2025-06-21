@@ -113,7 +113,7 @@
   },
   {
     "id": 15,
-    "release_date": "2024-06-17T00:00:00+00:00",
+    "release_date": "2025-06-17T00:00:00+00:00",
     "name": "Shareville Leaderboard",
     "description": "Launched the Shareville Leaderboard featuring the top 50 profiles with the highest returns. Users can sort by different time periods and filter by trades or holdings to explore performance strategies. Released as a 50/50 A/B test to inspire customers and encourage learning from top-performing investors.",
     "image_url": "/images/projects/leaderboard.png",
@@ -121,7 +121,7 @@
   },
   {
     "id": 16,
-    "release_date": "2024-06-20T00:00:00+00:00",
+    "release_date": "2025-06-20T00:00:00+00:00",
     "name": "Top Holdings",
     "description": "Created a feature showing which stocks top-performing Shareville users are holding, buying, and selling. Users can explore data across different time periods with filters for country and rating. Found under Discover > Shareville, helping users gain inspiration for their next investment decisions.",
     "image_url": "/images/projects/topholdings.jpg",
