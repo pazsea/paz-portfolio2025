@@ -1,0 +1,84 @@
+[
+  {
+    "id": 7,
+    "date": "2025-02-01T13:56:10+00:00",
+    "title": "Shareville Avatars released in app",
+    "description": "We have released Avatars in app. Users can now choose one of 20 avatars when onboarding or editing images in app.\nWeb coming soon. See more in projects.",
+    "image_url": "/images/projects/avatarsApp.png",
+    "links": [{ "url": "#projects", "text": "Projects" }]
+  },
+  {
+    "id": 1,
+    "date": "2024-11-30T00:00:00+00:00",
+    "title": "Shareville Hits All-Time High",
+    "description": "Shareville has reached an all-time high with 96,553 users. Proud to have contributed to this remarkable growth since starting on the project 2 years ago. This milestone highlights the impact of consistent innovation and collaboration.",
+    "image_url": "/images/news/alltimehigh.png",
+    "links": null
+  },
+  {
+    "id": 2,
+    "date": "2024-06-01T00:00:00+00:00",
+    "title": "Shareville Bonanza",
+    "description": "Celebrating the achievements of the Shareville team, pushing the boundaries of investment innovation. Showcased features like the live trades display and interactive portfolio analytics.",
+    "image_url": null,
+    "links": null
+  },
+  {
+    "id": 4,
+    "date": "2024-12-01T00:00:00+00:00",
+    "title": "Interviewing New Candidates",
+    "description": "Participated in technical interviews for new candidates, focusing on Java, React, and teamwork skills. Ensuring the best talent joins our innovative team.",
+    "image_url": null,
+    "links": null
+  },
+  {
+    "id": 3,
+    "date": "2025-01-05T00:00:00+00:00",
+    "title": "Launch of New Portfolio Page",
+    "description": "Launched a brand-new portfolio page built with Next.js, Tailwind, and Supabase. This page allows for real-time updates and seamless integration, giving users a modern and responsive experience.",
+    "image_url": "/images/news/portfolioLaunch.png",
+    "links": null
+  },
+  {
+    "id": 5,
+    "date": "2025-01-14T19:35:49+00:00",
+    "title": "Over 1000 views linkedin post!",
+    "description": "Exciting news! My post about the portfolio page has reached over 1000 views. If you haven't already, connect with me on LinkedIn to stay updated on my latest projects and achievements.",
+    "image_url": "https://mobile.linkedin.com/etc.clientlibs/settings/wcm/designs/gandalf/clientlibs/resources/images/og-social-share-image.jpg",
+    "links": [
+      {
+        "url": "https://www.linkedin.com/in/patrick-sjoberg/",
+        "text": "Linkedin"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "date": "2025-01-14T19:48:50+00:00",
+    "title": "Three Stars Achieved on Shareville!",
+    "description": "Big milestone! I've finally reached three stars on Shareville, which means my portfolio is in the top 10% of risk-adjusted returns on the platform. Not code-related, but hey, it's nice to know my finances are debugging themselves!",
+    "image_url": "/images/news/threestars.png",
+    "links": [
+      {
+        "url": "https://www.nordnet.se/forum/medlemmar/paz1987-1",
+        "text": "My Shareville Profile"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "date": "2025-03-04T00:00:00+00:00",
+    "title": "Shareville Avatar web",
+    "description": "Last month, we introduced randomly assigned profile pictures for newly created accounts in the app, moving away from the classic cat image. Now, this update is available on the web as well.\n\nNext up, we'll replace all old cat images with the new default pictures across the platform.",
+    "image_url": "/images/projects/sharevilleweb.png",
+    "links": [{ "url": "#projects", "text": "Projects" }]
+  },
+  {
+    "id": 12,
+    "date": "2025-03-27T00:00:00+00:00",
+    "title": "Multi compare feature on app released!",
+    "description": "In Nordnet version 21.25.0 our customers can now compare up to 8 instruments to each other.",
+    "image_url": "/images/projects/multi.png",
+    "links": []
+  }
+]

@@ -27,7 +27,7 @@ export default function Projects() {
     const visibleProjects = showMore
       ? projects
       : projects.slice(0, isMobile || isTablet ? 3 : 6);
-    return visibleProjects.map((project, index) => (
+    return visibleProjects.map((project) => (
       <div
         key={project.id}
         className="cursor-pointer"

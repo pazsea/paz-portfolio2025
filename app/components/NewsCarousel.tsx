@@ -2,11 +2,11 @@
 import { useState, useMemo } from "react";
 import useNews from "../hooks/useNews";
 import NewsCard from "./NewsCard";
-import ChevronIconLeft from "./ChevronIconLeft"; // Updated import
-import ChevronIconRight from "./ChevronIconRight"; // Updated import
+import ChevronIconLeft from "./ChevronIconLeft";
+import ChevronIconRight from "./ChevronIconRight";
 import Modal from "./Modal";
 import { News } from "../context/SupabaseContext.types";
-import { useGlobal } from "../context/GlobalContext"; // Import useGlobal
+import { useGlobal } from "../context/GlobalContext";
 import ExternalIcon from "./icons/ExternalIcon";
 
 export default function NewsCarousel() {

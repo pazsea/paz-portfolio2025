@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "release_date": "2023-02-23T00:00:00+00:00",
+    "name": "Auto Translate for Shareville",
+    "description": "Implemented auto translation for Shareville posts, allowing users to automatically translate feed posts to their selected language with the option to disable it. Integrated Google Translate into the backend for seamless localization functionality.",
+    "image_url": "/images/projects/autotranslate.png",
+    "platform": "BOTH"
+  },
+  {
+    "id": 2,
+    "release_date": "2024-05-03T00:00:00+00:00",
+    "name": "The Feed",
+    "description": "Developed a social media-like feed for investment discussions, displaying trades from followed users, user-generated posts, and news updates from followed or owned companies.",
+    "image_url": "/images/projects/feed.png",
+    "platform": "BOTH"
+  },
+  {
+    "id": 3,
+    "release_date": "2023-05-12T00:00:00+00:00",
+    "name": "Shareville Groups",
+    "description": "Created Shareville Groups, a feature similar to Facebook groups, allowing users to join, create, and participate in discussions on topics of interest. Users can post updates, comment on discussions, share files, and receive notifications about group activities to stay engaged with their investment communities.",
+    "image_url": "/images/projects/groupsweb.png",
+    "platform": "BOTH"
+  },
+  {
+    "id": 4,
+    "release_date": "2022-12-15T00:00:00+00:00",
+    "name": "Shareville Onboarding",
+    "description": "Designed an intuitive onboarding experience for Shareville.\nUsers could choose username and avatars.",
+    "image_url": "/images/projects/onboarding.png",
+    "platform": "BOTH"
+  },
+  {
+    "id": 5,
+    "release_date": "2024-01-03T00:00:00+00:00",
+    "name": "Portfolio Returns",
+    "description": "Developed detailed portfolio analytics pages where users can view a chart showcasing their shared portfolio returns. Added features like a period selector for customized timeframes, trade activity insights, and the ability to filter and focus on selected portfolios for a personalized overview.",
+    "image_url": "/images/projects/portfoliograph.jpeg",
+    "platform": "BOTH"
+  },
+  {
+    "id": 6,
+    "release_date": "2024-01-17T00:00:00+00:00",
+    "name": "Shareville Profiles",
+    "description": "Added user profiles showcasing portfolios.",
+    "image_url": "/images/projects/profiles.png",
+    "platform": "BOTH"
+  },
+  {
+    "id": 7,
+    "release_date": "2024-03-01T00:00:00+00:00",
+    "name": "Shareville Home",
+    "description": "Integrated Shareville into the app's home screen.",
+    "image_url": "/images/projects/sharevillediscover.png",
+    "platform": "BOTH"
+  },
+  {
+    "id": 8,
+    "release_date": "2024-12-01T00:00:00+00:00",
+    "name": "Trades Live in Shareville",
+    "description": "Implemented live trade displays on Shareville, allowing users to share their portfolio activities. When users buy or sell, their followed users can see these trades in real-time and even engage by commenting on them, fostering a more interactive investment community.",
+    "image_url": "/images/projects/trades.png",
+    "platform": "BOTH"
+  },
+  {
+    "id": 9,
+    "release_date": "2025-01-03T08:26:18+00:00",
+    "name": "Image Upload Feature for Posts",
+    "description": "Added functionality that allows users to upload images with their posts. Users can preview images before posting. The images are validated using Google Vision AI to ensure compliance with content guidelines. Images are stored securely in the cloud and optimized for performance.",
+    "image_url": "/images/projects/uploadImage.png",
+    "platform": "APP"
+  },
+  {
+    "id": 10,
+    "release_date": "2025-02-01T13:55:42+00:00",
+    "name": "Shareville Avatars in App",
+    "description": " We've introduced new default profile pictures for newly created accounts. Instead of the old cat image. Users will now receive one of 20+ randomly assigned avatars. Existing users can also switch to any of the new avatars. Web support is coming soon.",
+    "image_url": "/images/projects/avatarsApp.png",
+    "platform": "APP"
+  },
+  {
+    "id": 11,
+    "release_date": "2024-05-16T15:12:49+00:00",
+    "name": "Single compare in app",
+    "description": "Me and a collegue Henrik spens first worked on this for a hackathon that he came up with. It went down a storm so we finished it up. Now it is released in the app! \nHad fun working with the victory lib so you can do graphs in react native.",
+    "image_url": "https://pbs.twimg.com/media/GUyKMfRWoAAwzmz?format=jpg&name=large",
+    "platform": "APP"
+  },
+  {
+    "id": 12,
+    "release_date": "2025-03-04T00:00:00+00:00",
+    "name": "Shareville Avatar web",
+    "description": "Worked with React and Java on this project. Real fun to play with animations in framer motion lib and code to randomly assign avatars to different users.",
+    "image_url": "/images/projects/sharevilleweb.png",
+    "platform": "WEB"
+  },
+  {
+    "id": 13,
+    "release_date": "2025-03-28T00:00:00+00:00",
+    "name": "Multi compare",
+    "description": "Been working with one of the most popular graph packages in React Native — learned a ton along the way! ",
+    "image_url": "/images/projects/multi.png",
+    "platform": "APP"
+  },
+  {
+    "id": 14,
+    "release_date": "2025-03-27T00:00:00+00:00",
+    "name": "Pinned posts",
+    "description": "Some of our finance influencers wanted the ability to pin their posts at the top of the feed.\n\nSaid and done — it's now released! 📌🚀",
+    "image_url": "/images/projects/pinned.png",
+    "platform": "BOTH"
+  },
+  {
+    "id": 15,
+    "release_date": "2024-06-17T00:00:00+00:00",
+    "name": "Shareville Leaderboard",
+    "description": "Launched the Shareville Leaderboard featuring the top 50 profiles with the highest returns. Users can sort by different time periods and filter by trades or holdings to explore performance strategies. Released as a 50/50 A/B test to inspire customers and encourage learning from top-performing investors.",
+    "image_url": "/images/projects/leaderboard.png",
+    "platform": "APP"
+  },
+  {
+    "id": 16,
+    "release_date": "2024-06-20T00:00:00+00:00",
+    "name": "Top Holdings",
+    "description": "Created a feature showing which stocks top-performing Shareville users are holding, buying, and selling. Users can explore data across different time periods with filters for country and rating. Found under Discover > Shareville, helping users gain inspiration for their next investment decisions.",
+    "image_url": "/images/projects/topholdings.jpg",
+    "platform": "APP"
+  }
+]

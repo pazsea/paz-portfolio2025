@@ -1,67 +1,34 @@
-import { useEffect, useState } from "react";
-import { useSupabase } from "../context/SupabaseContext";
+import { useMemo } from "react";
 import { Project } from "../context/SupabaseContext.types";
+import projectsData from "../data/projects.json";
 
 export default function useProjects() {
-  const supabase = useSupabase();
-  const [projects, setProjects] = useState<Project[] | null>(null);
-  const [error, setError] = useState<any>(null);
+  const projects = useMemo(() => {
+    const currentDate = new Date();
+    const halfMonthAgo = new Date();
+    halfMonthAgo.setDate(currentDate.getDate() - 15);
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const cachedProjects = getCachedProjects();
-      if (cachedProjects) {
-        setProjects(cachedProjects);
-      } else {
-        await fetchAndCacheProjects();
-      }
-    };
+    const projectsWithIsNew = (projectsData as Project[]).map((project) => {
+      const releaseDateObj = new Date(project.release_date);
+      return {
+        ...project,
+        isNew: releaseDateObj >= halfMonthAgo,
+      };
+    }); // Sort by closest to today's date (most recent from today first)
+    const sorted = projectsWithIsNew.sort((a, b) => {
+      const today = new Date();
+      const dateA = new Date(a.release_date);
+      const dateB = new Date(b.release_date);
 
-    const getCachedProjects = () => {
-      const cachedProjects = localStorage.getItem("projects");
-      const cachedTimestamp = localStorage.getItem("projectsTimestamp");
-      const oneDay = 24 * 60 * 60 * 1000;
+      // Calculate absolute difference from today
+      const diffA = Math.abs(today.getTime() - dateA.getTime());
+      const diffB = Math.abs(today.getTime() - dateB.getTime());
 
-      if (cachedProjects && cachedTimestamp) {
-        const isCacheValid = Date.now() - parseInt(cachedTimestamp) < oneDay;
-        if (isCacheValid) {
-          return JSON.parse(cachedProjects);
-        }
-      }
-      return null;
-    };
+      return diffA - diffB; // Closest to today first
+    });
 
-    const fetchAndCacheProjects = async () => {
-      let { data, error } = await supabase.from("projects").select("*");
-      if (error) {
-        setError(error);
-      } else {
-        const currentDate = new Date();
-        const halfMonthAgo = new Date();
-        halfMonthAgo.setDate(currentDate.getDate() - 15);
+    return sorted;
+  }, []);
 
-        const projectsWithIsNew = data?.map((project) => {
-          const releaseDateObj = new Date(project.release_date);
-          return {
-            ...project,
-            isNew: releaseDateObj >= halfMonthAgo,
-          };
-        });
-
-        const sortedProjects = projectsWithIsNew?.sort(
-          (a, b) =>
-            new Date(b.release_date).getTime() -
-            new Date(a.release_date).getTime()
-        );
-
-        setProjects(sortedProjects || []);
-        localStorage.setItem("projects", JSON.stringify(sortedProjects));
-        localStorage.setItem("projectsTimestamp", Date.now().toString());
-      }
-    };
-
-    fetchProjects();
-  }, [supabase]);
-
-  return { projects, error };
+  return { projects, error: null };
 }
