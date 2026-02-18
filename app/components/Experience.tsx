@@ -2,9 +2,22 @@ import React from "react";
 import ExperienceCard from "./ExperienceCard";
 import nordnetlogo from "../../public/nordnetlogo.png";
 import caspecologo from "../../public/caspecologo.png";
+import atglogo from "../../public/atglogo.png";
 
 const Experience: React.FC = () => {
   const experiences = [
+    {
+      companyLogo: atglogo,
+      jobTitle: "App Developer (React Native)",
+      companyName: "ATG",
+      employmentPeriod: "Jan 2025 – Present",
+      location: "Stockholm, Sweden",
+      responsibilities: [
+        "Developing and maintaining the ATG mobile application using React Native.",
+        "Managing release processes, builds, and distribution to the App Store and Google Play.",
+        "Collaborating with cross-functional teams to deliver a seamless user experience.",
+      ],
+    },
     {
       companyLogo: nordnetlogo,
       jobTitle: "Software Engineer",
