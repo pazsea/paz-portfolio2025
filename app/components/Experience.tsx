@@ -1,8 +1,8 @@
 import React from "react";
 import ExperienceCard from "./ExperienceCard";
+import atglogo from "../../public/atglogo.png";
 import nordnetlogo from "../../public/nordnetlogo.png";
 import caspecologo from "../../public/caspecologo.png";
-import atglogo from "../../public/atglogo.png";
 
 const Experience: React.FC = () => {
   const experiences = [
@@ -22,7 +22,7 @@ const Experience: React.FC = () => {
       companyLogo: nordnetlogo,
       jobTitle: "Software Engineer",
       companyName: "Nordnet Bank AB",
-      employmentPeriod: "Jan 2023 – Present",
+      employmentPeriod: "Jan 2023 – Dec 2024",
       location: "Stockholm, Sweden",
       responsibilities: [
         "Developing features for the Shareville platform on both web and app, working across backend and frontend.",
